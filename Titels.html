@@ -1,12 +1,11 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="nl">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Boxworld - Informatie</title>
+    <title>Boxworld - Titels</title>
     <style>
       :root {
-        --bg: #0b0b0b;
         --panel: #111111;
         --text: #e9e9e9;
         --muted: #b9b9b9;
@@ -26,7 +25,6 @@
         color: var(--text);
       }
 
-      /* Navbar */
       .navbar {
         position: sticky;
         top: 0;
@@ -92,34 +90,6 @@
         color: #7a7a7a;
       }
 
-      .icon-btn {
-        width: 34px;
-        height: 34px;
-        border-radius: 10px;
-        border: 1px solid var(--border);
-        background: transparent;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        color: var(--text);
-        cursor: pointer;
-        padding: 0;
-      }
-
-      .search-btn {
-        width: 34px;
-        height: 34px;
-        border-radius: 999px;
-        border: 1px solid var(--border);
-        background: var(--panel);
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        color: var(--text);
-        padding: 0;
-      }
-
       .nav-links {
         display: flex;
         align-items: center;
@@ -164,7 +134,8 @@
         display: inline-flex;
         align-items: center;
         gap: 8px;
-        transition: background 120ms ease, border-color 120ms ease, transform 120ms ease;
+        transition: background 120ms ease, border-color 120ms ease,
+          transform 120ms ease;
       }
       .nav-name-btn:hover {
         transform: translateY(-1px);
@@ -187,9 +158,7 @@
         color: #fff;
         font-weight: 700;
         cursor: pointer;
-        transition:
-          transform 120ms ease,
-          background 120ms ease;
+        transition: transform 120ms ease, background 120ms ease;
         text-transform: lowercase;
       }
       .login-btn:hover {
@@ -232,15 +201,55 @@
         border-radius: 14px;
         padding: 18px 16px;
       }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 12px;
+        margin-top: 14px;
+      }
+
+      .tile {
+        border: 1px solid #222;
+        background: rgba(255, 255, 255, 0.02);
+        border-radius: 12px;
+        padding: 14px 12px;
+        min-height: 120px;
+      }
+
+      .tile h3 {
+        margin: 0 0 6px;
+        font-size: 15px;
+      }
+
+      .tile p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 14px;
+        line-height: 1.4;
+      }
+
+      .redline {
+        height: 3px;
+        width: 70px;
+        background: var(--red);
+        border-radius: 999px;
+        margin-top: 10px;
+      }
     </style>
   </head>
 
-  <body>
+  <body class="active-titels">
     <header class="navbar" aria-label="Hoofdnavigatie">
       <div class="nav-inner">
         <a class="brand" href="Boxing.html" aria-label="Boxworld">
-          <!-- Simple inline logo (acts as the top-left image). -->
-          <svg width="22" height="22" viewBox="0 0 24 24" role="img" aria-label="Boxworld logo">
+          <svg
+            width="22"
+            height="22"
+            viewBox="0 0 24 24"
+            role="img"
+            aria-label="Boxworld logo"
+          >
             <path
               fill="currentColor"
               d="M4 7.5C4 6.119 5.119 5 6.5 5h11C19.881 5 21 6.119 21 7.5v9C21 17.881 19.881 19 18.5 19h-11C5.119 19 4 17.881 4 16.5v-9z"
@@ -252,7 +261,8 @@
             <path fill="#e1061c" d="M4 6h16v2H4z" />
           </svg>
           <span class="brand-text">
-            <span class="brand-box">Box</span><span class="brand-world">world</span>
+            <span class="brand-box">Box</span
+            ><span class="brand-world">world</span>
           </span>
         </a>
 
@@ -265,16 +275,15 @@
           </svg>
           <input
             type="text"
-            placeholder="Search member or ID"
-            aria-label="Zoek lid of ID"
+            placeholder="Search titles..."
+            aria-label="Zoek titels"
           />
-          <button class="search-btn" type="button" aria-label="Zoek">
-            <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
-              <path
-                fill="currentColor"
-                d="M10 2a8 8 0 105.293 14.293l4.707 4.707 1.414-1.414-4.707-4.707A8 8 0 0010 2zm0 2a6 6 0 110 12a6 6 0 010-12z"
-              />
-            </svg>
+          <button
+            class="login-btn"
+            type="button"
+            style="padding: 6px 10px; border-radius: 999px"
+          >
+            <span style="display: inline-flex; align-items: center">Go</span>
           </button>
         </div>
 
@@ -285,11 +294,21 @@
         </nav>
 
         <div class="nav-actions">
-          <a class="nav-name-btn" data-page="results" href="Results.html" aria-label="Results">
+          <a
+            class="nav-name-btn"
+            data-page="results"
+            href="Results.html"
+            aria-label="Results"
+          >
             Results
           </a>
 
-          <a class="nav-name-btn" data-page="titels" href="Titels.html" aria-label="Titels">
+          <a
+            class="nav-name-btn"
+            data-page="titels"
+            href="Titels.html"
+            aria-label="Titels"
+          >
             Titels
           </a>
 
@@ -309,12 +328,29 @@
 
     <main>
       <div class="card">
-        <h1 style="margin: 0 0 8px; font-size: 20px;">Boxworld - Informative Hub</h1>
-        <p style="margin: 0; color: #bdbdbd; line-height: 1.45;">
-          Op deze pagina vind je updates en informatie over <strong>results</strong>,
-          <strong>titels</strong> en <strong>champions</strong>. Gebruik de navbar
-          om naar de juiste sectie te gaan.
+        <h1 style="margin: 0 0 8px; font-size: 20px">Titels</h1>
+        <p style="margin: 0; color: #bdbdbd; line-height: 1.45">
+          Hieronder vind je voorbeeldtitels. Vul dit later aan met echte data
+          (bijv. categorie, houder en datum van de titel).
         </p>
+
+        <div class="grid" aria-label="Voorbeeld titels">
+          <div class="tile">
+            <h3>World Champion</h3>
+            <p>Hoogste titel in de Boxworld-klasse.</p>
+            <div class="redline"></div>
+          </div>
+          <div class="tile">
+            <h3>European Champion</h3>
+            <p>Regionale titel voor Europese gevechten.</p>
+            <div class="redline"></div>
+          </div>
+          <div class="tile">
+            <h3>Interim Title</h3>
+            <p>Tijdelijke titel bij afwezigheid van de houder.</p>
+            <div class="redline"></div>
+          </div>
+        </div>
       </div>
     </main>
   </body>

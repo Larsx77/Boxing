@@ -3,10 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Boxworld - Informatie</title>
+    <title>Boxworld - Results</title>
     <style>
       :root {
-        --bg: #0b0b0b;
         --panel: #111111;
         --text: #e9e9e9;
         --muted: #b9b9b9;
@@ -26,7 +25,6 @@
         color: var(--text);
       }
 
-      /* Navbar */
       .navbar {
         position: sticky;
         top: 0;
@@ -90,34 +88,6 @@
       }
       .nav-search input::placeholder {
         color: #7a7a7a;
-      }
-
-      .icon-btn {
-        width: 34px;
-        height: 34px;
-        border-radius: 10px;
-        border: 1px solid var(--border);
-        background: transparent;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        color: var(--text);
-        cursor: pointer;
-        padding: 0;
-      }
-
-      .search-btn {
-        width: 34px;
-        height: 34px;
-        border-radius: 999px;
-        border: 1px solid var(--border);
-        background: var(--panel);
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        color: var(--text);
-        padding: 0;
       }
 
       .nav-links {
@@ -232,14 +202,44 @@
         border-radius: 14px;
         padding: 18px 16px;
       }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 14px;
+      }
+
+      th,
+      td {
+        text-align: left;
+        padding: 10px 8px;
+        border-bottom: 1px solid #222;
+        color: var(--muted);
+        font-size: 14px;
+      }
+
+      th {
+        color: var(--text);
+        font-weight: 800;
+      }
+
+      .badge {
+        display: inline-flex;
+        align-items: center;
+        padding: 4px 10px;
+        border-radius: 999px;
+        background: rgba(225, 6, 28, 0.12);
+        color: #ff6b7a;
+        font-weight: 800;
+        font-size: 12px;
+      }
     </style>
   </head>
 
-  <body>
+  <body class="active-results">
     <header class="navbar" aria-label="Hoofdnavigatie">
       <div class="nav-inner">
         <a class="brand" href="Boxing.html" aria-label="Boxworld">
-          <!-- Simple inline logo (acts as the top-left image). -->
           <svg width="22" height="22" viewBox="0 0 24 24" role="img" aria-label="Boxworld logo">
             <path
               fill="currentColor"
@@ -263,18 +263,9 @@
               d="M10 2a8 8 0 105.293 14.293l4.707 4.707 1.414-1.414-4.707-4.707A8 8 0 0010 2zm0 2a6 6 0 110 12a6 6 0 010-12z"
             />
           </svg>
-          <input
-            type="text"
-            placeholder="Search member or ID"
-            aria-label="Zoek lid of ID"
-          />
-          <button class="search-btn" type="button" aria-label="Zoek">
-            <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
-              <path
-                fill="currentColor"
-                d="M10 2a8 8 0 105.293 14.293l4.707 4.707 1.414-1.414-4.707-4.707A8 8 0 0010 2zm0 2a6 6 0 110 12a6 6 0 010-12z"
-              />
-            </svg>
+          <input type="text" placeholder="Search results..." aria-label="Zoek resultaten" />
+          <button class="login-btn" type="button" style="padding: 6px 10px; border-radius: 999px;">
+            <span style="display:inline-flex; align-items:center;">Go</span>
           </button>
         </div>
 
@@ -293,12 +284,7 @@
             Titels
           </a>
 
-          <a
-            class="nav-name-btn"
-            data-page="champions"
-            href="champions.html"
-            aria-label="Champions"
-          >
+          <a class="nav-name-btn" data-page="champions" href="champions.html" aria-label="Champions">
             champions
           </a>
 
@@ -309,13 +295,44 @@
 
     <main>
       <div class="card">
-        <h1 style="margin: 0 0 8px; font-size: 20px;">Boxworld - Informative Hub</h1>
+        <h1 style="margin: 0 0 8px; font-size: 20px;">Results</h1>
         <p style="margin: 0; color: #bdbdbd; line-height: 1.45;">
-          Op deze pagina vind je updates en informatie over <strong>results</strong>,
-          <strong>titels</strong> en <strong>champions</strong>. Gebruik de navbar
-          om naar de juiste sectie te gaan.
+          Hieronder staan voorbeeldresultaten. Vervang deze tabel met echte data (bijv. uit je backend of een dataset).
+          <span class="badge" style="margin-left: 10px;">Informative</span>
         </p>
+
+        <table aria-label="Voorbeeld resultaten">
+          <thead>
+            <tr>
+              <th style="width: 20%;">Datum</th>
+              <th style="width: 30%;">Event</th>
+              <th style="width: 25%;">Winnaar</th>
+              <th style="width: 25%;">Uitslag</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>2026-03-12</td>
+              <td>Boxworld Night</td>
+              <td>Red Corner</td>
+              <td>TKO (Rnd 6)</td>
+            </tr>
+            <tr>
+              <td>2026-03-05</td>
+              <td>Championship Series</td>
+              <td>Blue Corner</td>
+              <td>UD (3 ronden)</td>
+            </tr>
+            <tr>
+              <td>2026-02-28</td>
+              <td>Road to World</td>
+              <td>Red Corner</td>
+              <td>KO (Rnd 2)</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </main>
   </body>
 </html>
+
