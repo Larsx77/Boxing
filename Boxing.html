@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="nl">
   <head>
     <meta charset="UTF-8" />
@@ -164,7 +164,8 @@
         display: inline-flex;
         align-items: center;
         gap: 8px;
-        transition: background 120ms ease, border-color 120ms ease, transform 120ms ease;
+        transition: background 120ms ease, border-color 120ms ease,
+          transform 120ms ease;
       }
       .nav-name-btn:hover {
         transform: translateY(-1px);
@@ -187,9 +188,7 @@
         color: #fff;
         font-weight: 700;
         cursor: pointer;
-        transition:
-          transform 120ms ease,
-          background 120ms ease;
+        transition: transform 120ms ease, background 120ms ease;
         text-transform: lowercase;
       }
       .login-btn:hover {
@@ -240,7 +239,13 @@
       <div class="nav-inner">
         <a class="brand" href="Boxing.html" aria-label="Boxworld">
           <!-- Simple inline logo (acts as the top-left image). -->
-          <svg width="22" height="22" viewBox="0 0 24 24" role="img" aria-label="Boxworld logo">
+          <svg
+            width="22"
+            height="22"
+            viewBox="0 0 24 24"
+            role="img"
+            aria-label="Boxworld logo"
+          >
             <path
               fill="currentColor"
               d="M4 7.5C4 6.119 5.119 5 6.5 5h11C19.881 5 21 6.119 21 7.5v9C21 17.881 19.881 19 18.5 19h-11C5.119 19 4 17.881 4 16.5v-9z"
@@ -252,7 +257,8 @@
             <path fill="#e1061c" d="M4 6h16v2H4z" />
           </svg>
           <span class="brand-text">
-            <span class="brand-box">Box</span><span class="brand-world">world</span>
+            <span class="brand-box">Box</span
+            ><span class="brand-world">world</span>
           </span>
         </a>
 
@@ -265,8 +271,8 @@
           </svg>
           <input
             type="text"
-            placeholder="Search member or ID"
-            aria-label="Zoek lid of ID"
+            placeholder="Zoek naar vechter"
+            aria-label="Zoek vechter"
           />
           <button class="search-btn" type="button" aria-label="Zoek">
             <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
@@ -285,11 +291,21 @@
         </nav>
 
         <div class="nav-actions">
-          <a class="nav-name-btn" data-page="results" href="Results.html" aria-label="Results">
+          <a
+            class="nav-name-btn"
+            data-page="results"
+            href="Results.html"
+            aria-label="Results"
+          >
             Results
           </a>
 
-          <a class="nav-name-btn" data-page="titels" href="Titels.html" aria-label="Titels">
+          <a
+            class="nav-name-btn"
+            data-page="titels"
+            href="Titels.html"
+            aria-label="Titels"
+          >
             Titels
           </a>
 
@@ -309,11 +325,12 @@
 
     <main>
       <div class="card">
-        <h1 style="margin: 0 0 8px; font-size: 20px;">Boxworlddfdfjb - Informative Hub</h1>
-        <p style="margin: 0; color: #bdbdbd; line-height: 1.45;">
-          Op deze pagina vind je updates en informatie over <strong>results</strong>,
-          <strong>titels</strong> en <strong>champions</strong>. Gebruik de navbar
-          om naar de juiste sectie te gaan.
+        <h1 style="margin: 0 0 8px; font-size: 20px">Boxworld</h1>
+        <p style="margin: 0; color: #bdbdbd; line-height: 1.45">
+          Op deze pagina vind je updates en informatie over
+          <strong>results</strong>, <strong>titels</strong> en
+          <strong>champions</strong>. Gebruik de navbar om naar de juiste sectie
+          te gaan.
         </p>
       </div>
     </main>
