@@ -5,13 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Boxworld - Informatie</title>
     <link rel="stylesheet" href="style.css" />
+    <script>
+      window.RAPIDAPI_KEY =
+        "2785df6efemsh34498702e48ececp1a2e1fjsn212f6c98e750";
+    </script>
   </head>
 
   <body>
     <header class="navbar" aria-label="Hoofdnavigatie">
       <div class="nav-inner">
         <a class="brand" href="Boxing.html" aria-label="Boxworld">
-          <!-- Simple inline logo (acts as the top-left image). -->
           <svg
             width="22"
             height="22"
@@ -42,12 +45,20 @@
               d="M10 2a8 8 0 105.293 14.293l4.707 4.707 1.414-1.414-4.707-4.707A8 8 0 0010 2zm0 2a6 6 0 110 12a6 6 0 010-12z"
             />
           </svg>
+
           <input
+            id="search-input"
             type="text"
             placeholder="Zoek naar vechter"
             aria-label="Zoek vechter"
           />
-          <button class="search-btn" type="button" aria-label="Zoek">
+
+          <button
+            id="search-btn"
+            class="search-btn"
+            type="button"
+            aria-label="Zoek"
+          >
             <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
               <path
                 fill="currentColor"
@@ -56,12 +67,6 @@
             </svg>
           </button>
         </div>
-
-        <nav class="nav-links" aria-label="Menu">
-          <a href="Results.html">resuls</a>
-          <a href="Titels.html">titels</a>
-          <a href="champions.html">champions</a>
-        </nav>
 
         <div class="nav-actions">
           <a
@@ -106,6 +111,43 @@
           te gaan.
         </p>
       </div>
+
+      <section class="home-upcoming" aria-label="Opkomende gevechten">
+        <h2 class="section-title">Upcoming fights</h2>
+
+        <div id="upcoming-fights-list">
+          <article class="fight-block">
+            <div class="fight-head">
+              <div class="fight-logo">BOX</div>
+              <div class="fight-meta">
+                <div class="fight-title">Gevechten worden geladen...</div>
+                <div class="fight-location">Even geduld</div>
+              </div>
+            </div>
+            <div class="fight-body">
+              <div class="fight-topline">
+                <span>...</span>
+                <span class="fight-type">...</span>
+                <span class="fight-star">☆</span>
+              </div>
+              <div class="fight-row">
+                <h3 class="fighter-name">...</h3>
+                <div class="fight-vs">VS</div>
+                <h3 class="fighter-name right">...</h3>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="fighters-section" aria-label="Zoekresultaten">
+        <h2 class="section-title">Zoekresultaten</h2>
+        <div id="fighters-list">
+          <p>Zoek hierboven naar een vechter.</p>
+        </div>
+      </section>
     </main>
+
+    <script src="script.js"></script>
   </body>
 </html>
