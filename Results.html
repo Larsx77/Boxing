@@ -1,107 +1,32 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="nl">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Boxworld - Results</title>
+    <title>Boxing World - Redirect</title>
     <link rel="stylesheet" href="style.css" />
-    <script>
-      window.RAPIDAPI_KEY = "2785df6efemsh34498702e48ececp1a2e1fjsn212f6c98e750";
-    </script>
   </head>
-
-  <body class="active-results">
-    <header class="navbar" aria-label="Hoofdnavigatie">
-      <div class="nav-inner">
-        <a class="brand" href="Boxing.html" aria-label="Boxworld">
-          <svg width="22" height="22" viewBox="0 0 24 24" role="img" aria-label="Boxworld logo">
-            <path
-              fill="currentColor"
-              d="M4 7.5C4 6.119 5.119 5 6.5 5h11C19.881 5 21 6.119 21 7.5v9C21 17.881 19.881 19 18.5 19h-11C5.119 19 4 17.881 4 16.5v-9z"
-            />
-            <path
-              fill="#0b0b0b"
-              d="M8 8h2.2c1.2 0 2 .8 2 2s-.8 2-2 2H8V8zm2.2 2.7c.4 0 .7-.3.7-.7s-.3-.7-.7-.7H9.7v1.4h.5zM12.8 8H15c1.4 0 2.4.9 2.4 2.3 0 1.4-1 2.3-2.4 2.3h-2.2V8zm2.1 3c.6 0 1-.4 1-1s-.4-1-1-1h-.4v2h.4z"
-            />
-            <path fill="#e1061c" d="M4 6h16v2H4z" />
-          </svg>
-          <span class="brand-text">
-            <span class="brand-box">Box</span><span class="brand-world">world</span>
-          </span>
+  <body>
+    <header class="hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <nav class="top-nav" aria-label="Pagina navigatie">
+          <a class="top-nav-link" href="Boxing.html">Home</a>
+          <a class="top-nav-link" href="Titels.html">Titels</a>
+          <a class="top-nav-link" href="champions.html">Champions</a>
+          <a class="top-nav-link" href="upcoming-fights.html">Upcoming Fights</a>
+        </nav>
+        <a href="Boxing.html" aria-label="Ga naar home">
+          <img class="site-logo" src="images/logo.jpg" alt="Boxing World logo" />
         </a>
-
-        <div class="nav-search" role="search">
-          <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
-            <path
-              fill="currentColor"
-              d="M10 2a8 8 0 105.293 14.293l4.707 4.707 1.414-1.414-4.707-4.707A8 8 0 0010 2zm0 2a6 6 0 110 12a6 6 0 010-12z"
-            />
-          </svg>
-          <input type="text" placeholder="Search results..." aria-label="Zoek resultaten" />
-          <button class="login-btn nav-go-btn" type="button">
-            <span class="go-label">Go</span>
-          </button>
-        </div>
-
-        <div class="nav-actions">
-          <a class="nav-name-btn" data-page="results" href="Results.html" aria-label="Results">
-            Results
-          </a>
-
-          <a class="nav-name-btn" data-page="titels" href="Titels.html" aria-label="Titels">
-            Titels
-          </a>
-
-          <a class="nav-name-btn" data-page="champions" href="champions.html" aria-label="Champions">
-            champions
-          </a>
-
-          <button class="login-btn" type="button">login</button>
-        </div>
+        <p class="tag">Navigatie</p>
+        <h1>Gebruik de nieuwe pagina's</h1>
+        <p class="subtitle">
+          Deze pagina wordt niet meer gebruikt. Ga via rechtsboven naar
+          Champions of Upcoming Fights.
+        </p>
       </div>
     </header>
-
-    <main>
-      <div class="card">
-        <h1 class="page-title">Results</h1>
-        <p class="page-lead">
-          Hieronder staan voorbeeldresultaten. Vervang deze tabel met echte data (bijv. uit je backend of een dataset).
-          <span class="badge badge-spaced">Informative</span>
-        </p>
-
-        <table aria-label="Voorbeeld resultaten">
-          <thead>
-            <tr>
-              <th class="col-date">Datum</th>
-              <th class="col-event">Event</th>
-              <th class="col-winner">Winnaar</th>
-              <th class="col-result">Uitslag</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>2026-03-12</td>
-              <td>Boxworld Night</td>
-              <td>Red Corner</td>
-              <td>TKO (Rnd 6)</td>
-            </tr>
-            <tr>
-              <td>2026-03-05</td>
-              <td>Championship Series</td>
-              <td>Blue Corner</td>
-              <td>UD (3 ronden)</td>
-            </tr>
-            <tr>
-              <td>2026-02-28</td>
-              <td>Road to World</td>
-              <td>Red Corner</td>
-              <td>KO (Rnd 2)</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </main>
-    <script src="script.js"></script>
   </body>
 </html>
 
